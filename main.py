@@ -32,6 +32,7 @@ class Mechanics:
     
     
     
+    
     # Choose four Pokémon for the given player
     def choose_Pokemon(self, player) -> None:
         while len(player) < 4:
