@@ -18,7 +18,6 @@ pokemons = [
     ["Snorlax", 160, 110, 5, 4],
 ]
 
-
 class Mechanics:
     def __init__(self) -> None:
         self.player1 = []
