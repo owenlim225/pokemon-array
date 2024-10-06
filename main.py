@@ -3,8 +3,7 @@
 # Machine Problem #1M
 
 from tabulate import tabulate
-
-
+import os
 class PokemonGame:
     def __init__(self):
         self.player1 = []
@@ -61,6 +60,7 @@ class PokemonGame:
         print(f"Player 1's Pokémon: {self.player1}")
         print(f"Player 2's Pokémon: {self.player2}")
 
-# Example usage:
-game = PokemonGame()
-game.start_game()
+if __name__ == "__main__":
+    game = PokemonGame()
+    os.system('cls')
+    game.start_game()
