@@ -23,8 +23,6 @@ class Mechanics:
         self.player1 = []
         self.player2 = []
     
-    
-    
     # Print out all the names of the pokemon
     def pokemon_list_display(self) -> None:
         for count, pokemon in enumerate(pokemons, start=1):
