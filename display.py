@@ -2,9 +2,9 @@
 # Limosnero, Sherwin P.
 # J2S <3
 
-from rich import box
+
 from rich.align import Align
-from rich.console import Console, Group
+from rich.console import Group, Live
 from rich.layout import Layout
 from rich.panel import Panel
 from rich.table import Table
@@ -101,3 +101,11 @@ C. Pokemon  : {self.current_pokemon}"""
         battle_footer.add_column(width=20, justify="center")
         # ... (add rows for footer)
         return battle_footer
+
+    # In your display.py, at the end of the Display class
+
+    def run(self):
+        with Live(self.layout, refresh_per_second=10):  # You may adjust the refresh rate
+            while True:
+                if exit_flag:  # Check for the exit flag to break the loop
+                    break

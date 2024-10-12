@@ -47,11 +47,15 @@ class Mechanism:
                 self.display.update_battle_results(self.get_battle_results())
             elif self.selecting_pokemon and user_input.isdigit():
                 self.handle_pokemon_selection(int(user_input))
-            else:
+            else:   
                 self.display.invalid_input()
+
 
             if not self.selecting_pokemon:
                 self.selecting_pokemon = False
+
+            # Call the method to render the display
+            self.display.run()  # Update the display here
 
     def handle_pokemon_selection(self, choice):
         # Handle the user's selection of Pokemon here
